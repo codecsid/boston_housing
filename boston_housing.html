@@ -13253,7 +13253,10 @@ s5bhAyAzMzMzM2sZPgAyMzMzM7OW4QMgMzMzMzNrGf8D+vd0F2e2mw8AAAAASUVORK5CYII=
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: </strong> <em>Choosing the top right graph where the max_depth is 3. If more training points are added then the training and the testing curve are going to converge a little bit more.</em>
+<p><strong>Answer: </strong> <em>Choosing the top right graph where the max_depth is 3.</em> 
+<em>As more training points are added the error in training score increases and hence the training score begins to decrease gradually and after sufficient training points are added, the score stops increasing or decreasing.</em></p>
+<p><em>Initially the testing curve attains a certain score and then as the training points increase, the score of testing curve also increase gradually but after some time when the training score becomes steady , testing score also becomes steady indicating that the model has achieved the state of equilibrium in bias and variance.</em></p>
+<p><em>If more training points are added then the training and the testing curve are going to converge a little bit more.</em>
 <em>Adding more training points is not going to benefit the model very much.</em></p>
 
 </div>
@@ -13729,7 +13732,7 @@ MUHDkp4xxpig8f/ZJhZftvs1HAAAAABJRU5ErkJggg==
 <p><strong>Answer: </strong> <em>We can observe the following trends in the curves in above graph: </em></p>
 <p><em>Training Curve - Initially it goes up immediately and then goes up slowly as we increase the max_depth because as we add more and more features the model begins to overfit the data and hence the training score approaches 1 gradually as we increase the max_depth.</em></p>
 <p><em>Testing Curve - Initially it goes up immediately and then goes up, upto a max_depth of 4 because the model that is trained using has a equilibrium in the bias and the variance but as the model starts to overfit the data, it also starts making false predictions and hence the testing score goes down.</em></p>
-<p><em>From above observations, it can be said that at max_depth = 1 model suffers from high bias but at max_depth = 10 it suffers from high variance.</em></p>
+<p><em>From above observations, it can be said that at max_depth = 1 model suffers from high bias because there is a high training error as the training score is near 0.5 which suggests that model does satisfies much values.On the other hand, at max_depth = 10 it suffers from high variance which is evident from the complexity curve that the validation error is very high than that of training error as the curves are quite apart at max_depth = 10 and also, score of training curve is approx 1 which indicates overfitting while the score of testing curve is quite low than that of testing curve approx. 0.7.</em></p>
 
 </div>
 </div>
@@ -13801,7 +13804,8 @@ MUHDkp4xxpig8f/ZJhZftvs1HAAAAABJRU5ErkJggg==
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: </strong> <em>The K-fold Cross-Validation technique divides the dataset into k bins of equal sizes and then one of the bins is taken as the testing bin and the other as the training bins and hence k separate learning experiments are run. When K-fold CV is used for Grid Search then it provides better learning experiments for the various combinations of parameters and hence, help providing parameters combination with best performance. </em></p>
+<p><strong>Answer: </strong> <em>The K-fold Cross-Validation technique divides the dataset into k bins of equal sizes and then one of the bins is taken as the testing bin and the other as the training bins and hence k separate learning experiments are run and testing error for each of them is calculated. Finally, we combine the error rates into a single average known as cross-validation error.</em></p>
+<p><em>When K-fold CV is used for Grid Search then we get a cross-validation error for every parameter tuning and finally we choose the parameter tuning that gives the minimum cv error, therefore, helping provide parameters combination with best performance.</em></p>
 
 </div>
 </div>
